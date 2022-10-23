@@ -18,13 +18,11 @@ def node_value_insert(root_node, node_value):
       print(f'{node_value} is inserted at left subtree of {root_node.data}')
     else:
       node_value_insert(root_node.leftChild, node_value)
-      # print(f'{node_value} is moved to lowest left subtree')
   elif root_node.rightChild is None:
     root_node.rightChild = BinarySearchTree(node_value)
     print(f'{node_value} is inserted at right subtree of {root_node.data}')
   else:
     node_value_insert(root_node.rightChild, node_value)
-    # print(f'{node_value} is moved to lowest right subtree')
 
 
 #Initializing the Binary Search Tree
